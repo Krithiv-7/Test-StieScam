@@ -50,3 +50,7 @@ function toggleVisibility() {
         inputBox.setAttribute('type', 'text');
     }
 }
+
+.input-box input {
+    text-align: center;
+}
