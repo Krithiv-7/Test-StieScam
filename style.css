@@ -28,3 +28,7 @@ button[type="submit"] {
     font-size: 20px;
     margin-top: 20px;
 }
+
+.input-box input {
+    text-align: center;
+}
