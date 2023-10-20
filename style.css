@@ -15,7 +15,7 @@ input[type="text"] {
     font-size: 30px;
     transition: border-bottom 0.3s;
     margin: 10px; /* Add margin for spacing */
-    letter-spacing: 0.5px;
+    letter-spacing: 1px;
 }
 
 input[type="text"]:focus {
