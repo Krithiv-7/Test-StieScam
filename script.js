@@ -36,12 +36,7 @@ function updateInputClass() {
     }
 }
 
-function saveForm() {
-    // Replace this with your actual save form logic
-    // For example, you can submit the form or perform an AJAX request here.
-    // For demonstration purposes, we'll simply alert a message.
-    alert('Form saved!');
-}
+
 
 function toggleVisibility() {
     if (isHidden) {
