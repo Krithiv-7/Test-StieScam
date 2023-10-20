@@ -1,9 +1,6 @@
-var buttons = document.querySelectorAll('.btn, .backspace, .Enter');
+var buttons = document.querySelectorAll('.btn, .backspace, .Enter, .show');
 var inputBox = document.querySelector('.input-box input');
-var showButton = document.querySelector('.show');
-
-// Variable to track whether the values are currently hidden
-var valuesHidden = false;
+var isHidden = true;
 
 buttons.forEach(function(button) {
     button.addEventListener('click', function() {
@@ -15,11 +12,14 @@ buttons.forEach(function(button) {
         } else if (value === "Enter") {
             // Handle Enter button: Save the form (you can replace this with your saving logic)
             saveForm();
+        } else if (value === "show") {
+            // Toggle visibility of the input field
+            isHidden = !isHidden;
+            toggleVisibility();
         } else {
             // Check if the input length is less than 6; if so, append the value
             if (inputBox.value.length < 6) {
                 inputBox.value += value;
-
                 // Add a CSS class to style the input
                 updateInputClass();
             }
@@ -43,12 +43,10 @@ function saveForm() {
     alert('Form saved!');
 }
 
-showButton.addEventListener('click', function() {
-    // Toggle the visibility of the values in the input field
-    if (valuesHidden) {
-        inputBox.type = 'password'; // Hide values with asterisks
+function toggleVisibility() {
+    if (isHidden) {
+        inputBox.setAttribute('type', 'password');
     } else {
-        inputBox.type = 'text'; // Show the actual values
+        inputBox.setAttribute('type', 'text');
     }
-    valuesHidden = !valuesHidden; // Toggle the flag
-});
+}
