@@ -51,6 +51,3 @@ function toggleVisibility() {
     }
 }
 
-.input-box input {
-    text-align: center;
-}
