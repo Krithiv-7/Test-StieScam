@@ -9,13 +9,17 @@
 
 input[type="text"] {
     border: none;
-    border-bottom: 2px solid black;
+    border-bottom: 1px solid transparent;
     width: 200px;
     text-align: center;
     font-size: 30px;
+    transition: border-bottom 0.3s;
     margin: 10px; /* Add margin for spacing */
-    outline: none; /* Remove outline on focus */
-    position: relative;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-bottom: 1px solid black;
 }
 
 input[type="text"]:invalid {
@@ -30,20 +34,21 @@ button[type="submit"] {
 .input-box input {
     text-align: center;
 }
+body {
+    margin-left: -1px;
+}
 
-input[type="text"]::after {
+input[type="text"]:not(:placeholder-shown)::after {
     content: "";
     position: absolute;
     left: 0;
     bottom: 0;
     width: 100%;
-    height: 2px; /* Adjust this value for the thickness of the underline */
-    background-color: black;
-    transform: scaleX(0); /* Initially scale it to 0 width */
-    transform-origin: center bottom;
-    transition: transform 0.2s; /* Add a smooth transition for the underline */
+    height: 1px;
+    background-color: black; /* Color of the underline */
 }
 
+/* Additional styling for the input field when it's focused */
 input[type="text"]:focus::after {
-    transform: scaleX(1); /* Expand the underline on focus */
+    background-color: black; /* Color of the underline on focus */
 }
