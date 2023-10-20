@@ -12,10 +12,6 @@ buttons.forEach(function(button) {
         } else if (value === "Enter") {
             // Handle Enter button: Save the form (you can replace this with your saving logic)
             saveForm();
-        } else if (value === "show") {
-            // Toggle visibility of the input field
-            isHidden = !isHidden;
-            toggleVisibility();
         } else {
             // Check if the input length is less than 6; if so, append the value
             if (inputBox.value.length < 6) {
