@@ -32,3 +32,6 @@ button[type="submit"] {
 .input-box input {
     text-align: center;
 }
+body {
+    margin-left: -1px;
+}
