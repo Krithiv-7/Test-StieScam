@@ -37,12 +37,3 @@ function updateInputClass() {
 }
 
 
-
-function toggleVisibility() {
-    if (isHidden) {
-        inputBox.setAttribute('type', 'password');
-    } else {
-        inputBox.setAttribute('type', 'text');
-    }
-}
-
