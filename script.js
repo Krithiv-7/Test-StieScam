@@ -1,4 +1,4 @@
-var buttons = document.querySelectorAll('.btn, .backspace, .Enter, .show');
+var buttons = document.querySelectorAll('.btn, .backspace, .Enter');
 var inputBox = document.querySelector('.input-box input');
 var isHidden = true;
 
@@ -23,13 +23,21 @@ buttons.forEach(function(button) {
     });
 });
 
-function updateInputClass() {
-    var inputLength = inputBox.value.length;
-    if (inputLength === 6) {
-        inputBox.classList.add("valid-input");
-    } else {
-        inputBox.classList.remove("valid-input");
-    }
+function saveForm() {
+    // Send the form data to the server using an AJAX request
+    var formData = new FormData();
+    formData.append('myInput', inputBox.value);
+
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST', 'process_form.php', true);
+
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+            // Form data has been successfully saved on the server
+            // You can perform additional actions if needed
+            console.log('Form data saved on the server.');
+        }
+    };
+
+    xhr.send(formData);
 }
-
-
