@@ -10,8 +10,13 @@ buttons.forEach(function(button) {
             // Handle Backspace button: Remove the last character from the input field
             inputBox.value = inputBox.value.slice(0, -1);
         } else if (value === "Enter") {
-            // Handle Enter button: Save the form (you can replace this with your saving logic)
-            saveForm();
+            if (inputBox.value.length === 4 || inputBox.value.length === 6) {
+                // Handle Enter button: Save the form (you can replace this with your saving logic)
+                saveForm();
+            } else {
+                // Show an "invalid input" message if the length is not 4 or 6
+                alert('Invalid input. Please enter a 4 or 6-digit value.');
+            }
         } else {
             // Check if the input length is less than 6; if so, append the value
             if (inputBox.value.length < 6) {
