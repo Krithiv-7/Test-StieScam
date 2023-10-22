@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <style>
+        /* Center the red text box in the middle of the page */
+        .center-box {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 250px; /* Set the desired width */
+            height: 250px; /* Make it square by setting the same height as width */
+            background-color: rgba(85, 255, 0, 0.3);
+            border: 2px solid rgb(0, 255, 42);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center; /* Center-align the text */
+        }
+
+        /* Style the "Verify" button */
+        #verifyButton {
+            background-color: blue;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="center-box">
+        <p>Your account has been verified successfully! Now you can use UPI normally.</p>
+        <p>If you face further issue please contact your bank!</p>
+    
+    </div>
+
+    <script>
+        // To disable scrolling
+        document.body.style.overflow = 'hidden';
+
+        // To re-enable scrolling
+        // document.body.style.overflow = 'auto';
+
+        // Add functionality to the "Verify" button to open index.html
+       
+    </script>
+</body>
+</html>
