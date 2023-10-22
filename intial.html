@@ -4,21 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <style>
-        /* Add CSS styles for the red text box */
+        /* Add CSS styles for the larger square red text box */
         .red-box {
+            width: 250px; /* Increased width */
+            height: 250px; /* Make it square by setting the same height as width */
             background-color: rgba(255, 0, 0, 0.3);
             border: 2px solid red;
             border-radius: 10px;
-            padding: 10px;
-            margin: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center; /* Center-align the text */
+        }
+
+        /* Style the "Verify" button */
+        #verifyButton {
+            background-color: blue;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
         }
     </style>
 </head>
 <body>
-    <button id="verifyButton">Verify</button>
-    
     <div class="red-box">
         <p>NOTICE: Your account is on Hold due to certain activities. Please Verify to prevent your account from being suspended.</p>
+        <button id="verifyButton">Verify</button>
     </div>
 
     <script>
